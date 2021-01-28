@@ -1,0 +1,157 @@
+@import 'reset/reset.scss';
+@import 'media_query';
+
+$light: #fff;
+$dark : #000;
+$line :#7782e6;
+
+%aling_center{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.navbar{
+   background-color: $line;
+   display: flex;
+   height: 80px;
+   justify-content: space-between;
+   padding:  0.5rem ;
+   position: relative;
+  color: $light;
+  @extend %aling_center;
+
+   &_logo{
+       color: #fff;
+       cursor: pointer;
+       text-decoration: none;
+       font-size: 2rem;
+       margin-left: 24px;
+       
+
+   }
+   &_bar{
+       opacity: 0;
+
+       @include tablet{
+           color:$dark;
+           opacity: 1;
+           position: absolute;
+           top: 22px;
+           right: 20px;
+           font-size: 1rem;
+       }
+   }
+   &_items{
+       @extend %aling_center;
+       list-style: none;
+       text-align: center;
+       margin-right: 25px;
+       font-size: 1.3rem;
+
+       @include tablet{
+           display: none;
+           
+
+
+       }
+   }
+    &_items &_menu_links{
+        color: $light;
+        @extend %aling_center;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0 1rem;
+
+        &:hover{
+            color: $dark;
+            transition: all 0.3s ease;
+
+
+        }
+    }
+
+
+    
+}
+.hero{
+    background-color: #fff;
+
+    &_container{
+         
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        height: 100%;
+        padding-left: 24px;
+        padding-right: 0px;
+        margin-top: 10px;
+        @include tablet{
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+        
+    &_left{
+        color: $line;
+        line-height: 1.2;
+        
+        @include tablet{
+            padding: 5rem 0 ;
+        }
+        @include mobile{
+            line-height: 1.5;
+        }
+    }
+&_left h1{
+    font-size: 4rem;
+    color: $line;
+
+    @include mobile{
+        font-size: 1.5rem;
+
+    }
+}
+&_left p{
+    font-size: 2.5rem;
+    color: $line;
+    @include mobile{
+        font-size: 1rem;
+    }
+}
+.hero_container_btn{
+    font-size: 1rem;
+    background-color: $line;
+    color: #fff;
+    padding: 14px 32px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+.hero_container_btn:hover{
+    background-color: #fff;
+    color: $line;
+    border: 1px solid;
+    cursor: pointer;
+}
+.hero_container_btn a{
+    text-align: center;
+    text-decoration: none;
+}
+    &_right img{
+        margin: 10xp;
+            height: 45%;
+            width: 100%;
+            border: none;
+            border-radius: 20px;
+    }
+
+    }
+    
+}
+
+
+
